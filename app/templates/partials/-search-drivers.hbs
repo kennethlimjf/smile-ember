@@ -1,0 +1,34 @@
+<div class="search-heading">
+  <h5>
+    <span>{{fa-icon 'search'}}</span>
+    Search for Drivers
+  </h5>
+</div>
+
+{{#fm-form action="submit"}}
+  {{fm-field label="Area"
+             type="select"
+             content=controller.options.areas
+             optionValuePath="content.id"
+             optionLabelPath="content.label"
+             prompt="-- Select Area --" }}
+  
+  <div class="option-group">
+    <label for="Language" class="control-label">Language</label>
+    {{#each lang in options.languages }}
+      {{fm-checkbox checked=lang.checked label=lang.label}}
+    {{/each}}
+  </div>
+
+  <div class="option-group">
+    <label for="Channel" class="control-label">Contact Channels</label>
+    {{#each channel in options.channels }}
+      {{fm-checkbox checked=channel.checked label=channel.label}}
+    {{/each}}
+  </div>
+
+  <a class="button black" {{action "searchDrivers"}}>
+    Find Drivers
+    {{fa-icon 'angle-right'}}
+  </a>
+{{/fm-form}}
