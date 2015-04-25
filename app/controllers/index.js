@@ -22,5 +22,12 @@ export default Ember.Controller.extend({
       Ember.Object.create({ id: "WeChat", label: "WeChat", checked: false}),
       Ember.Object.create({ id: "Email", label: "Email", checked: false })
     ]
+  },
+
+  actions: {
+    searchDrivers: function() {
+      this.transitionToRoute('drivers');
+      return false;
+    }
   }
 });
