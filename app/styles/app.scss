@@ -1,0 +1,96 @@
+@import "settings";
+@import "foundation";
+
+$white: #fff;
+
+/**
+ * Base Styles
+ */
+
+// Button
+.button {
+  background: transparent;
+  border: 2px solid $white;
+  border-radius: 4px;
+  margin: 0 10px;
+
+  font-color: $white;
+  font-size: 0.875em;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  &.small {
+    padding-top: 0.750rem;
+    padding-right: 1.75rem;
+    padding-bottom: 0.750rem;
+    padding-left: 1.75rem;
+    font-size: 0.8125rem;
+  }
+
+  &.no-border {
+    border: none;
+  }
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+/**
+ * Main Layout
+ */
+
+// Top Bar
+.topbar {
+  position: fixed;
+  width: 100%;
+  background: rgba(0,0,0, 0.4);
+  padding: 20px 40px;
+  height: 80px;
+  text-align: center;
+
+  .left-off-canvas-toggle {
+    float: left; 
+    margin-top: 8px;
+
+    span {
+      color: $white;
+      margin-right: 5px;
+    }
+    .menu-text {
+      text-transform: uppercase;
+      font-size: 0.875em;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+  }
+
+  .tuk-tuk-logo {
+    text-align: center;
+    
+    img {
+      width: 100px;
+    }
+  }
+
+  .top-bar-buttons {
+    float: right;
+  }
+}
+
+// Main Container
+.main-container {
+  padding: 0;
+  margin: 0;
+  margin-top: 80px;
+
+  .hero {
+    margin-top: -80px;
+    background: url('images/background/1.jpg') no-repeat center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 800px;
+  }
+}

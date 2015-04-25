@@ -1,3 +1,19 @@
-<h2 id="title">Welcome to Ember.js</h2>
+<div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
 
-{{outlet}}
+    <!-- Off Canvas Menu -->
+    {{partial 'partials/menu'}}
+
+    <!-- Top Bar -->
+    {{partial 'partials/topbar'}}
+    
+    <!-- main content goes here -->
+    <div class="main-container">
+      {{outlet}}
+    </div>
+
+    <!-- close the off-canvas menu -->
+    <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
