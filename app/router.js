@@ -8,7 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.resource("drivers", function() {
     this.route("show", { path: ":driver_id" });
-  })
+  });
 });
 
 export default Router;
