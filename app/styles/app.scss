@@ -146,10 +146,8 @@ body {
 /**
  * Home Page
  */
-
 .content {
-  position: absolute;
-  top: 10px;
+  margin-top: 10px;
   width: 100%;
   padding-bottom: 60px;
 
@@ -186,7 +184,7 @@ body {
 
       .form-group, .checkbox {
         display: inline-block;
-        width: 100px;
+        width: 90px;
       }
     }
 
