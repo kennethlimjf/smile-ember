@@ -3,6 +3,7 @@
 
 $white: #fff;
 $gray: #ebebeb;
+$bg-alpha: rgba(255,255,255,0.75);
 
 /**
  * Base Styles
@@ -67,7 +68,7 @@ html {
   background-size: cover;
 }
 body {
-  background: rgba(255, 255, 255, 0.75);
+  background: $bg-alpha;
 }
 
 // Top Bar
@@ -80,7 +81,7 @@ body {
   text-align: center;
 
   .left-off-canvas-toggle {
-    float: left; 
+    float: left;
     margin-top: 8px;
 
     span {
@@ -97,7 +98,7 @@ body {
 
   .tuk-tuk-logo {
     text-align: center;
-    
+
     img {
       width: 100px;
     }
@@ -118,6 +119,30 @@ body {
   overflow-y: auto;
 }
 
+// Footer
+.footer {
+  height: 60px;
+  padding: 18px 40px;
+  background-color: rgba(0,0,0, 0.8);
+  color: $white;
+
+  .copyright {
+    float: left;
+    p {
+      font-size: 14px;
+      font-weight: 100;
+    }
+  }
+
+  .links {
+    float: right;
+    a {
+      color: $white;
+      margin: 0 20px;
+    }
+  }
+}
+
 /**
  * Home Page
  */
@@ -127,7 +152,7 @@ body {
   top: 80px;
   width: 100%;
   padding-bottom: 60px;
-  
+
   .tag-line {
     padding-top: 50px;
     text-align: center;
@@ -144,13 +169,13 @@ body {
     padding: 30px;
     margin-top: 60px;
     height: 350px;
-    background: rgba(255,255,255, 0.8);
+    background: $bg-alpha;
     border: 1px solid #dedede;
     border-radius: 4px;
 
    .search-heading {
      margin-bottom: 30px;
-   
+
      h5 > span > i {
       margin-right: 10px;
      }
@@ -158,7 +183,7 @@ body {
 
     .option-group {
       display: inline;
-      
+
       .form-group, .checkbox {
         display: inline-block;
         width: 120px;
@@ -171,7 +196,7 @@ body {
       display: inline-block;
       font-weight: 400;
     }
-   
+
     select {
       width: 300px;
     }
@@ -204,7 +229,7 @@ body {
   box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
 
   .search-filter {
-    height: 80px; 
+    height: 80px;
     border-bottom: 1px solid $black;
   }
 

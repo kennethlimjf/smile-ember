@@ -10,6 +10,7 @@ Router.map(function() {
     this.route("show", { path: ":driver_id" });
   });
   this.route("about", { path: "about-us" });
+  this.route("team", { path: "our-team" });
 });
 
 export default Router;
