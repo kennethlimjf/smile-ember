@@ -1,0 +1,14 @@
+<div class="row drivers">
+  <div class="small-12 columns">
+    <div class="search-filter">
+      <!-- Search Filter Functions to be implemented. -->
+      Drivers in Town
+    </div>
+
+    <div class="search-results">
+      {{#each item in model }}
+        {{view "driver-item"}}
+      {{/each}}
+    </div>
+  </div>
+</div>
