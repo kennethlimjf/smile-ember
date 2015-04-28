@@ -279,6 +279,7 @@ body {
 
     p {
       font-size: 14px;
+      color: $black;
     }
   }
 }
@@ -297,4 +298,108 @@ body {
 .hvr-float:focus,
 .hvr-float:active {
   transform: translateY(-8px);
+}
+
+/**
+ * Driver Profile Page
+ */
+.profile-page-hero {
+  background: url('http://upload.wikimedia.org/wikipedia/en/9/98/Jersey_City_Panorama.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-position: 0 -100px;
+  padding-top: 30px;
+
+  iframe {
+    margin: 0 auto;
+    display: block;
+  }
+}
+.profile-page-fold {
+  margin-top: -60px;
+  height: 60px;
+  background-color: rgba(0,0,0,0.6);
+}
+.profile-page-body {
+  background: url('images/background/bg-blur-23.jpg') no-repeat center center fixed;
+  background-size: cover;
+  height: 500px;
+
+  .main-content {
+    background-color: $white;
+    height: 100%;
+  }
+  .left {
+    float: left;
+  }
+  .right {
+    float: right !important;
+    margin: 0;
+  }
+
+  .left, .right {
+    background-color: transparent;
+    height: 100%;
+    padding: 20px 30px 20px 50px;
+    color: $white;
+
+    .section {
+      margin-top: 50px;
+    }
+    .section > a > i {
+      margin-right: 10px;
+      color: $white;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $white;
+      margin-bottom: 0.5em;
+
+      i { margin-right: 15px; }
+    }
+
+    .tag {
+      background-color: darkgrey;
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 6px;
+      margin: 2px;
+    }
+  }
+
+  .profile-avatar {
+    width: 220px;
+    height: 220px;
+    border-radius: 110px;
+    background-color: $white;
+    margin: -110px auto 0 auto;
+    -webkit-box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
+    -moz-box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
+    box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
+
+    img {
+      width: 210px;
+      height: 210px;
+      border-radius: 105px;
+      margin: 5px;
+    }
+  }
+  .profile {
+    text-align: center;
+
+    h3 {
+      margin-top: 20px;
+    }
+
+    .divider {
+      width: 30px;
+      border: 1px solid $black;
+      margin: 0 auto;
+    }
+
+    p {
+      margin-top: 30px;
+    }
+  }
 }

@@ -1,10 +1,12 @@
-<img class="item-bg" {{bind-attr src=item.bgUrl}} alt="">
-<div class="description">
-  <h5>{{item.fullName}}</h5>
-  <div class="avatar">
-    <img class="item-avatar" {{bind-attr src=item.avatarUrl}} alt="">
+{{#link-to 'drivers.show' item.id}}
+  <img class="item-bg" {{bind-attr src=item.bgUrl}} alt="">
+  <div class="description">
+    <h5>{{item.fullName}}</h5>
+    <div class="avatar">
+      <img class="item-avatar" {{bind-attr src=item.avatarUrl}} alt="">
+    </div>
+    <div class="intro">
+      <p>{{item.shortDesc}}</p>
+    </div>
   </div>
-  <div class="intro">
-    <p>{{item.shortDesc}}</p>
-  </div>
-</div>
+{{/link-to}}

@@ -1,1 +1,61 @@
-drivers show
+<div class="page">
+  <div class="profile-page-hero">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/_zWEBd8JKlA" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="profile-page-fold"></div>
+  <div class="profile-page-body">
+
+    <div class="small-3 columns left">
+      <div class="section">
+        <h4>{{fa-icon 'home'}} City</h4>
+        <div class="tag">Siem Reap</div>
+        <div class="tag">Phnom Penh</div>
+      </div>
+
+      <div class="section">
+        <h4>{{fa-icon 'taxi'}} Vehicle</h4>
+        <div class="tag">Tuk Tuk</div>
+        <div class="tag">Taxi</div>
+      </div>
+
+      <div class="section">
+        <h4>{{fa-icon 'tachometer'}} Driving Experience</h4>
+        <p>10 years</p>
+      </div>
+    </div>
+
+    <div class="small-6 columns main-content">
+      <div class="profile-avatar">
+        <img class="avatar-image" {{bind-attr src=model.avatarUrl}} alt="">
+      </div>
+      <div class="profile">
+        <h3>{{model.fullName}}</h3>
+        <div class="divider"></div>
+        <h6>{{model.preferredName}}</h6>
+        <p>{{model.description}}</p>
+      </div>
+    </div>
+
+    <div class="small-3 columns right">
+      <div class="section">
+        <h4>{{fa-icon 'user'}} Contact</h4>
+        {{#link-to ''}}{{fa-icon 'facebook-square' size=2}}{{/link-to}}
+        {{#link-to ''}}{{fa-icon 'wechat' size=2}}{{/link-to}}
+        {{#link-to ''}}{{fa-icon 'whatsapp' size=2}}{{/link-to}}
+        {{#link-to ''}}{{fa-icon 'envelope-o' size=2}}{{/link-to}}
+      </div>
+
+      <div class="section">
+        <h4>{{fa-icon 'comment'}} Language Spoken</h4>
+        <div class="tag">English</div>
+        <div class="tag">Khmer</div>
+      </div>
+
+      <div class="section">
+        <h4>{{fa-icon 'pencil'}} Language Written</h4>
+        <div class="tag">English</div>
+        <div class="tag">Khmer</div>
+      </div>
+    </div>
+  </div>
+</div>
