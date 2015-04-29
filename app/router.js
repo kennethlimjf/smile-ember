@@ -11,6 +11,7 @@ Router.map(function() {
   });
   this.route("about", { path: "about-us" });
   this.route("team", { path: "our-team" });
+  this.route("faq", { path: "faq" });
 });
 
 export default Router;
