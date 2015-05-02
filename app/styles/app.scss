@@ -129,8 +129,17 @@ body {
   .copyright {
     float: left;
     p {
+      margin-right: 25px;
+      display: inline-block;
       font-size: 14px;
       font-weight: 100;
+    }
+  }
+
+  .contacts {
+    float: left;
+    a {
+      margin-left: 5px;
     }
   }
 
