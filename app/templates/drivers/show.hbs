@@ -6,15 +6,15 @@
     <div class="small-3 columns left">
       <div class="section">
         <h4>{{fa-icon 'home'}} City</h4>
-        {{#each item in model.area}}
-          <div class="tag">{{item.name}}</div>
+        {{#each city in model.cities}}
+          <div class="tag">{{city}}</div>
         {{/each}}
       </div>
 
       <div class="section">
         <h4>{{fa-icon 'taxi'}} Vehicle</h4>
-        {{#each item in model.vehicle}}
-          <div class="tag">{{item.name}}</div>
+        {{#each vehicle in model.vehicles}}
+          <div class="tag">{{vehicle}}</div>
         {{/each}}
       </div>
 
@@ -31,7 +31,7 @@
       <div class="profile">
         <h3>{{model.fullName}}</h3>
         <div class="divider"></div>
-        <h6>{{model.preferredName}}</h6>
+        <h6>{{model.nickname}}</h6>
         <p>{{model.description}}</p>
       </div>
     </div>
@@ -39,8 +39,8 @@
     <div class="small-3 columns right">
       <div class="section">
         <h4>{{fa-icon 'user'}} Contact</h4>
-        {{#if model.facebook}}
-          <a {{bind-attr href=model.facebook}}>{{fa-icon "facebook-square" size=2}}</a>
+        {{#if model.facebookUrl}}
+          <a {{bind-attr href=model.facebookUrl}}>{{fa-icon "facebook-square" size=2}}</a>
         {{/if}}
         {{#if model.email}}
           <a {{bind-attr href=model.mailToEmail}}>{{fa-icon "envelope-o" size=2}}</a>
@@ -52,15 +52,15 @@
 
       <div class="section">
         <h4>{{fa-icon 'comment'}} Language Spoken</h4>
-        {{#each item in model.languageSpoken}}
-          <div class="tag">{{item.name}}</div>
+        {{#each lang in model.languagesSpoken}}
+          <div class="tag">{{lang}}</div>
         {{/each}}
       </div>
 
       <div class="section">
         <h4>{{fa-icon 'pencil'}} Language Written</h4>
-        {{#each item in model.languageWritten}}
-          <div class="tag">{{item.name}}</div>
+        {{#each lang in model.languagesWritten}}
+          <div class="tag">{{lang}}</div>
         {{/each}}
       </div>
     </div>
