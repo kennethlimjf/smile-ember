@@ -16,7 +16,6 @@ export default Ember.Controller.extend({
       Ember.Object.create({ id: "Email", label: "Email", checked: false }),
       Ember.Object.create({ id: "Facebook", label: "Facebook", checked: false }),
       Ember.Object.create({ id: "WeChat", label: "WeChat", checked: false})
- 
     ]
   },
 
