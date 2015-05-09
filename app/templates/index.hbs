@@ -1,4 +1,53 @@
+
+
+
+<script type="text/javascript">
+    
+    
+    var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed 
+vid.pause();
+// to capture IE10
+vidFade();
+}); 
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+
+
+    
+
+</script>
+
 <div class="row home page">
+    
+    
+    
+    <video autoplay  poster="" id="bgvid" loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="assets/images/cs_bgvid.webm" type="video/webm">
+<source src="assets/images/cs_bgvid.mp4" type="video/mp4">
+</video>
+    
+    
+    
   <div class="small-12 large-8 large-centered columns">
 
     <div class="content">
