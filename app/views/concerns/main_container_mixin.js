@@ -11,6 +11,7 @@ export default Ember.Mixin.create({
 
   didInsertElement: function() {
     this.setHeight();
+    this._super.apply(this, arguments);
   },
 
   containerHeight: function() {
@@ -28,7 +29,9 @@ export default Ember.Mixin.create({
   },
 
   setPageHeight: function(){
-    var pageHeight = this.$('.page').height();
+    // page_height = height + padding_top + padding_bottom
+    var pageHeight = this.$('.page').height() + 28 + 55;
+
     if(pageHeight < this.containerHeight() - 60) {
       this.$('.page').css('height', this.containerHeight() - 60);
     }
