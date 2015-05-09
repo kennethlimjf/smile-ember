@@ -3,7 +3,9 @@
 # compiled output
 /dist
 /tmp
-/bin/deploy
+/bin
+/smile-ember
+/smile-ember.tar.gz
 
 # dependencies
 /node_modules
