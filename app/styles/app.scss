@@ -4,6 +4,7 @@
 $white: #fff;
 $gray: #ebebeb;
 $bg-alpha: rgba(0,0,0,0.45);
+$darkgray: #1a1a1a;
 
 /**
  * Base Styles
@@ -92,6 +93,22 @@ body {
 }
 
 // Top Bar
+.banner {
+  height: 80px;
+  padding: 25px 20px;
+  text-align: center;
+  background-color: $darkgray;
+  font-size: 18px;
+  font-weight: 600;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  a.button {
+    padding: 5px 10px;
+    margin-left: 20px;
+  }
+}
 .topbar {
   position: fixed;
   width: 100%;
