@@ -130,8 +130,12 @@ body {
     text-align: center;
       
     img {
+// HEAD 
       width: 50px;
     margin-top: -10px;
+//=======
+ //     width: 130px;
+//>>>>>>> 0f93c6119c9d7e89b2398ea8fad7526789492b76
     }
   }
     
@@ -397,8 +401,6 @@ width: 50%;
   }
 
   .avatar {
-    width: 90px;
-    height: 90px;
     position: absolute;
     top: -45px;
     right: 15px;
@@ -406,6 +408,11 @@ width: 50%;
     img {
       border-radius: 45px;
     }
+  }
+
+  .avatar, .avatar img {
+    width: 90px;
+    height: 90px;
   }
 
   .description {
@@ -444,9 +451,6 @@ width: 50%;
  * Driver Profile Page
  */
 .profile-page-hero {
-  background: url('http://upload.wikimedia.org/wikipedia/en/9/98/Jersey_City_Panorama.jpg') no-repeat center center fixed;
-  background-size: cover;
-  background-position: 0 -100px;
   padding-top: 30px;
 
   iframe {

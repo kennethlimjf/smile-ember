@@ -3,8 +3,9 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   options: {
     areas: [
-      { id: "Siem Reap", label: "Siem Reap" },
-      { id: "Phnom Penh", label: "Phnom Penh" },
+      { id: "All", label: "All" },
+      // { id: "Siem Reap", label: "Siem Reap" },
+      // { id: "Phnom Penh", label: "Phnom Penh" },
     ],
     languages: [
       Ember.Object.create({ id: "English", label: "English", checked: false }),
@@ -16,7 +17,6 @@ export default Ember.Controller.extend({
       Ember.Object.create({ id: "Email", label: "Email", checked: false }),
       Ember.Object.create({ id: "Facebook", label: "Facebook", checked: false }),
       Ember.Object.create({ id: "WeChat", label: "WeChat", checked: false})
- 
     ]
   },
 

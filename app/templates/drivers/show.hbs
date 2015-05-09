@@ -1,26 +1,26 @@
 <div class="page">
-  <div class="profile-page-hero">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/_zWEBd8JKlA" frameborder="0" allowfullscreen></iframe>
-  </div>
+  <div class="profile-page-hero"></div>
   <div class="profile-page-fold"></div>
   <div class="profile-page-body">
 
     <div class="small-3 columns left">
       <div class="section">
         <h4>{{fa-icon 'home'}} City</h4>
-        <div class="tag">Siem Reap</div>
-        <div class="tag">Phnom Penh</div>
+        {{#each city in model.cities}}
+          <div class="tag">{{city}}</div>
+        {{/each}}
       </div>
 
       <div class="section">
         <h4>{{fa-icon 'taxi'}} Vehicle</h4>
-        <div class="tag">Tuk Tuk</div>
-        <div class="tag">Taxi</div>
+        {{#each vehicle in model.vehicles}}
+          <div class="tag">{{vehicle}}</div>
+        {{/each}}
       </div>
 
       <div class="section">
         <h4>{{fa-icon 'tachometer'}} Driving Experience</h4>
-        <p>10 years</p>
+        <p>{{model.drivingYears}} years</p>
       </div>
     </div>
 
@@ -31,7 +31,7 @@
       <div class="profile">
         <h3>{{model.fullName}}</h3>
         <div class="divider"></div>
-        <h6>{{model.preferredName}}</h6>
+        <h6>{{model.nickname}}</h6>
         <p>{{model.description}}</p>
       </div>
     </div>
@@ -39,22 +39,29 @@
     <div class="small-3 columns right">
       <div class="section">
         <h4>{{fa-icon 'user'}} Contact</h4>
-        {{#link-to ''}}{{fa-icon 'facebook-square' size=2}}{{/link-to}}
-        {{#link-to ''}}{{fa-icon 'wechat' size=2}}{{/link-to}}
-        {{#link-to ''}}{{fa-icon 'whatsapp' size=2}}{{/link-to}}
-        {{#link-to ''}}{{fa-icon 'envelope-o' size=2}}{{/link-to}}
+        {{#if model.facebookUrl}}
+          <a {{bind-attr href=model.facebookUrl}}>{{fa-icon "facebook-square" size=2}}</a>
+        {{/if}}
+        {{#if model.email}}
+          <a {{bind-attr href=model.mailToEmail}}>{{fa-icon "envelope-o" size=2}}</a>
+        {{/if}}
+        {{#if model.phone}}
+          <a {{bind-attr href=model.callToPhone}}>{{fa-icon "phone" size=2}}</a>
+        {{/if}}
       </div>
 
       <div class="section">
         <h4>{{fa-icon 'comment'}} Language Spoken</h4>
-        <div class="tag">English</div>
-        <div class="tag">Khmer</div>
+        {{#each lang in model.languagesSpoken}}
+          <div class="tag">{{lang}}</div>
+        {{/each}}
       </div>
 
       <div class="section">
         <h4>{{fa-icon 'pencil'}} Language Written</h4>
-        <div class="tag">English</div>
-        <div class="tag">Khmer</div>
+        {{#each lang in model.languagesWritten}}
+          <div class="tag">{{lang}}</div>
+        {{/each}}
       </div>
     </div>
   </div>
