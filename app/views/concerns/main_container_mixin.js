@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Mixin.create({
+  classNames: ["scrollable"],
+
   init: function() {
     var context = this;
     Ember.$(window).on('resize', Ember.run.bind(context, context.setHeight));
@@ -13,7 +15,7 @@ export default Ember.Mixin.create({
 
   containerHeight: function() {
     // inner window height - topbar height
-    return window.innerHeight - 80;
+    return window.innerHeight - 160;
   },
 
   setHeight: function() {
@@ -27,7 +29,7 @@ export default Ember.Mixin.create({
 
   setPageHeight: function(){
     var pageHeight = this.$('.page').height();
-    if(pageHeight < this.containerHeight()) {
+    if(pageHeight < this.containerHeight() - 60) {
       this.$('.page').css('height', this.containerHeight() - 60);
     }
   }
