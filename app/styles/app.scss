@@ -85,8 +85,7 @@ h6 {
  */
 
 html {
-//background: url('images/background/bg-landscape.jpg') no-repeat center center fixed;
-    background: $black;
+  background: $black;
   background-size: cover;
 }
 body {
@@ -117,7 +116,7 @@ body {
   padding: 20px 40px;
   height: 80px;
   text-align: center;
-    border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
 
   .left-off-canvas-toggle {
     float: left;
@@ -135,14 +134,12 @@ body {
     }
   }
 
-
-    .logo_txt{
-        color: white;
-        text-transform: uppercase;
-        padding: 10px;
-        letter-spacing: 1px;
-    }
-
+  .logo_txt{
+    color: white;
+    text-transform: uppercase;
+    padding: 10px;
+    letter-spacing: 1px;
+  }
 
   .tuk-tuk-logo {
     text-align: center;
@@ -155,7 +152,7 @@ body {
 
   .top-bar-buttons {
     float: right;
-    .button {margin-left: 6px; margin-right: 0px;}
+    .button { margin-left: 6px; margin-right: 0px; }
   }
 }
 
@@ -245,20 +242,18 @@ body {
     text-align: center;
     padding-bottom: 5px;
 
-      h2{
+    h2 {
+      color:$white;
+      font-weight: 100;
+      font-size: 40px;
+      text-transform: uppercase;
+    }
 
-          color:$white;
-          font-weight: 100;
-          font-size: 40px;
-          text-transform: uppercase;
-}
-      h6{
-
-          color: $white;
-          font-weight: 100;
-          font-size: 16.7px;
-      }
-
+    h6 {
+      color: $white;
+      font-weight: 100;
+      font-size: 16.7px;
+    }
   }
 
   .line {
@@ -273,54 +268,46 @@ body {
     height: 636.656px;
     background: rgba(255,255,255,1);
     border-radius: 1000px;
-      box-shadow: 0 0px 20px 5px rgba(0,0,0,0.35);
-      text-align: center;
-
-   .search-heading {
-       margin-top: 18px;
-     margin-bottom: 40px;
+    box-shadow: 0 0px 20px 5px rgba(0,0,0,0.35);
     text-align: center;
 
-     h5 > span > i {
-      margin-right: 7px;
-         font-size: 28px;
-     }
+    .search-heading {
+      margin-top: 18px;
+      margin-bottom: 40px;
+      text-align: center;
 
-       h5{
-       font-weight: 900;
-           color:rgba(0,0,0,0.75);
-       }
-   }
+      h5 > span > i {
+        margin-right: 7px;
+        font-size: 28px;
+      }
+
+      h5 {
+        font-weight: 900;
+        color:rgba(0,0,0,0.75);
+      }
+    }
 
     .option-group {
       display: inline;
 
-
-     .form-group, .checkbox {
+      .form-group, .checkbox {
         display: inline-block;
-         margin: auto auto;
+        margin: auto auto;
         width: 90px;
-          padding-top: 6px;
-
-
-
+        padding-top: 6px;
       }
 
-        .control-label{
-
-            border-bottom: 2px solid rgba(0,0,0,0.2);
-  padding-bottom: 10px;
-            padding-top: 20px;
-  width: 365px;
-  margin: auto auto;
-
-
-
-        }
+      .control-label{
+        border-bottom: 2px solid rgba(0,0,0,0.2);
+        padding-bottom: 10px;
+        padding-top: 20px;
+        width: 365px;
+        margin: auto auto;
+      }
     }
 
     .form-group > label, .option-group > label {
-    //width: 150px;
+      //width: 150px;
       margin: 10px 20px 10px 0;
       //display: inline-block;
       font-weight: 400;
@@ -328,24 +315,23 @@ body {
 
     select {
       width: 280px;
-        border-radius: 4px;
-        //background: rgba(0,0,0,0.23);
-  color: #4d4d4d;
-        padding-left: 12px;
-  border: 1px solid rgba(0,0,0,0.1);
-        border-top: 2px solid rgba(0,0,0,0.4);
+      border-radius: 4px;
+      //background: rgba(0,0,0,0.23);
+      color: #4d4d4d;
+      padding-left: 12px;
+      border: 1px solid rgba(0,0,0,0.1);
+      border-top: 2px solid rgba(0,0,0,0.4);
 
-  height: 45px;
-  font-size: 16px;
+      height: 45px;
+      font-size: 16px;
     }
 
-      label {
-
+    label {
       font-size: 0.95rem;
-      }
+    }
 
     input[type="checkbox"] {
-      margin-right: 5px;
+        margin-right: 5px;
     }
 
     a.button {
@@ -360,8 +346,8 @@ body {
   }
 }
 
-   video {
-    position: fixed;
+video {
+  position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
@@ -369,7 +355,7 @@ body {
   width: auto;
   height: auto;
   z-index: -100;
-   }
+}
 
 /**
  * Drivers Page
@@ -385,10 +371,6 @@ body {
   .search-filter {
     height: 80px;
     border-bottom: 1px solid $black;
-  }
-
-  .search-results {
-    height: 800px;
   }
 }
 
@@ -442,6 +424,7 @@ body {
     }
   }
 }
+
 .hvr-float {
   display: inline-block;
   vertical-align: middle;
@@ -453,6 +436,7 @@ body {
   transition-property: transform;
   transition-timing-function: ease-out;
 }
+
 .hvr-float:hover,
 .hvr-float:focus,
 .hvr-float:active {
