@@ -92,6 +92,24 @@ body {
   background: $bg-alpha;
 }
 
+//More FAQ
+.more-faq {
+  padding: 18px 40px;
+  text-align: center;
+ 
+  font-size: 18px;
+  font-weight: 600;
+  color: $white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  a.button {
+    padding: 5px 10px;
+    margin-left: 20px;
+  }
+}
+
+
 // Top Bar
 .banner {
   height: 80px;
@@ -109,6 +127,7 @@ body {
     margin-left: 20px;
   }
 }
+
 .topbar {
   position: fixed;
   width: 100%;
