@@ -21,7 +21,7 @@ export default DS.Model.extend({
   vehicles:         DS.attr(),
   cities:           DS.attr(),
   avatarUrl:        DS.attr("String", { defaultValue : "http://www.angkortuktuk.net/Savuth%20portrait.jpg" }),
-  bgUrl:            DS.attr("String", { defaultValue : "http://www.epuzzled.net/New%20Folder%20(5)/tuk%20tuk%20Bangkok%20562%20kb.JPG"}),
+  backgroundUrl:    DS.attr("String", { defaultValue : "http://www.epuzzled.net/New%20Folder%20(5)/tuk%20tuk%20Bangkok%20562%20kb.JPG"}),
 
   fullName: Ember.computed("name", function() {
     return this.get("firstName") + " " + this.get("lastName");
