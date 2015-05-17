@@ -4,8 +4,8 @@ export default Ember.Controller.extend({
   options: {
     areas: [
       { id: "All", label: "All" },
-      // { id: "Siem Reap", label: "Siem Reap" },
-      // { id: "Phnom Penh", label: "Phnom Penh" },
+      { id: "Siem Reap", label: "Siem Reap" },
+      { id: "Phnom Penh", label: "Phnom Penh" },
     ],
     languages: [
       Ember.Object.create({ id: "English", label: "English", checked: false }),
