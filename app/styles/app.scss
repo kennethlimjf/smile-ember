@@ -2,7 +2,8 @@
 @import "foundation";
 
 $white: #fff;
-$gray: #ebebeb;
+$white-alpha: rgba(255,255,255,0.8);
+$gray: rgb(236,236,236);
 $bg-alpha: rgba(0,0,0,0.45);
 $darkgray: #1a1a1a;
 
@@ -125,7 +126,13 @@ body {
   a.button {
     padding: 5px 10px;
     margin-left: 20px;
+    font-size:14px;
   }
+    i{
+    cursor: pointer;
+    float: right;
+    margin-top: 7px;
+    }
 }
 
 .topbar {
@@ -133,7 +140,7 @@ body {
   width: 100%;
   background: rgba(0,0,0, 0.4);
   padding: 20px 40px;
-  height: 80px;
+  height: 105px;
   text-align: center;
   border-bottom: 2px solid #ffffff;
 
@@ -156,7 +163,7 @@ body {
   .logo_txt{
     color: white;
     text-transform: uppercase;
-    padding: 10px;
+      display: block;
     letter-spacing: 1px;
   }
 
@@ -179,14 +186,14 @@ body {
 .main-container {
   padding: 0;
   margin: 0;
-  margin-top: 80px;
+  margin-top: 105px;
   width: 100%;
   height: 20px;
   overflow-y: auto;
 }
 
 .scrollable {
-  overflow-y: scroll;
+overflow-y: hidden;
 }
 
 
@@ -196,7 +203,7 @@ body {
   padding-top:20px;
   padding-bottom: 30px;
   padding: 28px 40px 55px;
-  box-shadow: 0 0px 20px 5px rgba(0,0,0,0.35);
+  box-shadow: 0 -2px 20px 1px rgba(0,0,0,0.35);
 }
 
 .about.row .row_left, .about.row .row_right {
@@ -248,15 +255,7 @@ body {
   }
 }
 
-/**
- * Home Page
- */
-.content {
-  margin-top: 10px;
-  width: 100%;
-  padding-bottom: 60px;
-
-  .tag-line {
+.tag-line {
     padding-top: 60px;
     text-align: center;
     padding-bottom: 5px;
@@ -275,23 +274,38 @@ body {
     }
   }
 
-  .line {
+.line {
     width: 60%;
     margin: 0 auto;
     border-bottom: 1px solid $white;
   }
 
+/**
+ * Home Page
+ */
+.content {
+    overflow: hidden;
+  margin-top: 10px;
+  width: 100%;
+  padding-bottom: 60px;
+
   .search-form {
-    padding: 30px;
+      
+      width: 100%;
+    height:0;
+    padding-bottom: 100%;
+    -moz-border-radius: 100%; 
+    -webkit-border-radius: 100%; 
+    border-radius: 100%;
+      
     margin-top: 60px;
-    height: 636.656px;
+    
     background: rgba(255,255,255,1);
-    border-radius: 1000px;
     box-shadow: 0 0px 20px 5px rgba(0,0,0,0.35);
     text-align: center;
 
     .search-heading {
-      margin-top: 18px;
+      padding-top: 8%;
       margin-bottom: 40px;
       text-align: center;
 
@@ -379,32 +393,51 @@ video {
 /**
  * Drivers Page
  **/
+
+
 .drivers.row {
+    max-width: 100%;
+    margin-top: 50px;
   background: $white;
   padding: 30px 30px 80px 30px;
-  -webkit-box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
-  -moz-box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
-  box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
+  -webkit-box-shadow: 0px -2px 16px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 0px -2px 16px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 0px -2px 16px 0px rgba(0, 0, 0, 0.6);
+    
 
   .search-filter {
     height: 80px;
     border-bottom: 1px solid $black;
   }
+    .search-results{
+    text-align: center;
+    }
+}
+
+
+.small-12 columns{
+margin-top: -100px;
 }
 
 .ember-view.driver-item {
-  width: 277px;
+  width: 30%;
+    min-width: 200px;
   height: 310px;
-  margin: 35px 35px 35px 0;
+    text-align: left;
+  margin: 15px 15px 15px 15px;
   display: inline-flex;
   background-color: $white;
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
 
-  &:nth-child(3n+3) {
-    margin: 35px 0;
-  }
+//&:nth-child(3n+3) {
+  //  margin: 35px 0;
+  //}
 
   img.item-bg {
     float: left;
@@ -419,6 +452,7 @@ video {
 
     img {
       border-radius: 45px;
+        border: 5px solid white;
     }
   }
 
@@ -433,9 +467,18 @@ video {
     min-height: 130px;
     bottom: 0;
     padding: 15px;
+      border-top: 8px solid white;
     border-radius: 0 0 4px 4px;
     background-color: $gray;
+      box-shadow: 0 -2px 20px 1px rgba(0,0,0,0.45);
+      -webkit-box-shadow: 0 -2px 20px 1px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0 -2px 20px 1px rgba(0,0,0,0.45);
 
+      h5{
+      font-weight: 900;
+          
+      }
+      
     p {
       font-size: 14px;
       color: $black;
@@ -474,8 +517,8 @@ video {
 }
 .profile-page-fold {
   margin-top: -60px;
-  height: 60px;
-  background-color: rgba(0,0,0,0.6);
+  height: 10px;
+  background-color: rgba(255,255,255,0.7);
 }
 .profile-page-body {
   background: url('images/background/bg-blur-23.jpg') no-repeat center center fixed;
@@ -560,4 +603,132 @@ video {
       margin-top: 30px;
     }
   }
+}
+
+/**
+ * Team Page
+ */
+
+.row.page.team{
+    
+    table{
+    border-spacing: 0px;
+        
+    box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 4px 0px rgba(0, 0, 0, 0.25);
+    
+        td{
+        text-align: center;
+        
+        }
+    }
+    
+    
+.fa-2x{
+font-size: 1.5em;
+display: block;
+    padding: 6px;
+}
+    
+.fa-2x:hover{opacity: 0.5;}
+    
+    .fa-facebook{
+    
+        color:#3b5998;
+    
+    }
+    
+    .fa-linkedin{
+    
+        color: #007bb6;
+    }
+
+.avatar {
+ 
+
+    img {
+      border-radius: 45px;
+        border: 5px solid $gray;
+    }
+  }
+
+  .avatar, .avatar img {
+    width: 90px;
+    height: 90px;
+  }
+    
+    
+}
+
+
+/**
+ * MEDIA QUERIES
+ */
+
+@media (max-width: 1112px) {
+ 
+    .ember-view.driver-item {
+  width: 45%;
+ 
+  }
+}
+
+
+@media (max-width: 1024px) {
+    
+ .search-form{
+ width: 60%!important;
+    padding-bottom: 60%!important;
+    -moz-border-radius: 60%!important; 
+    -webkit-border-radius: 60%!important; 
+    border-radius: 60%!important;
+     margin: auto auto;
+ }
+    
+    
+}
+
+@media (max-width: 780px) {
+    
+    
+    .search-form{
+ width: 100%!important;
+    padding-bottom: 100%!important;
+    -moz-border-radius: 100%!important; 
+    -webkit-border-radius: 100%!important; 
+    border-radius: 100%!important;
+ }
+    
+ 
+    .ember-view.driver-item {
+  width: 90%!important;
+    height: 400px!important;
+ 
+  }
+    
+    .banner{
+        text-align: left!important;
+        font-size: 14px;
+        
+        a{
+        font-size: 12px!important;
+            margin-left: 10px!important;
+            margin-right: 0px!important;
+        }
+    }
+}
+
+@media (max-width: 650px) {
+    .banner{text-align: center!important;
+    padding: 11px 20px!important;
+    
+    }
+    span{
+        display: block;
+        
+        }
+    a{
+    margin-top: 4px!important;
+    }
 }
