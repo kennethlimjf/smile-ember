@@ -8,5 +8,17 @@
     <div class="intro">
       <p>{{item.shortDesc}}</p>
     </div>
+      <div class="list-contact">
+          <a {{bind-attr href=model.facebookUrl}}>{{fa-icon "fa-facebook" size=2}}</a>
+        
+          <a {{bind-attr href=model.mailToEmail}}>{{fa-icon "envelope-o" size=2}}</a>
+        
+          <a {{bind-attr href=model.callToPhone}}>{{fa-icon "phone" size=2}}</a>
+      </div>
+      <div class="list-fav">
+          <i class="fa fa-heart-o fa-2x"></i>
+          <i class="fa fa-heart fa-2x"></i>
+      </div>
+      
   </div>
 {{/link-to}}

@@ -4,6 +4,21 @@
   <div class="profile-page-body">
 
     <div class="small-3 columns left">
+        
+        <div class="section">
+        <h4>{{fa-icon 'comment'}} Language Spoken</h4>
+        {{#each lang in model.languagesSpoken}}
+          <div class="tag">{{lang}}</div>
+        {{/each}}
+      </div>
+
+      <div class="section">
+        <h4>{{fa-icon 'pencil'}} Language Written</h4>
+        {{#each lang in model.languagesWritten}}
+          <div class="tag">{{lang}}</div>
+        {{/each}}
+      </div>
+        
       <div class="section">
         <h4>{{fa-icon 'home'}} City</h4>
         {{#each city in model.cities}}
@@ -20,7 +35,9 @@
 
       <div class="section">
         <h4>{{fa-icon 'tachometer'}} Driving Experience</h4>
-        <p>{{model.drivingYears}} years</p>
+        <div class="tag">
+         {{model.drivingYears}} years
+            </div>
       </div>
     </div>
 
@@ -28,17 +45,8 @@
       <div class="profile-avatar">
         <img class="avatar-image" {{bind-attr src=model.avatarUrl}} alt="">
       </div>
-      <div class="profile">
-        <h3>{{model.fullName}}</h3>
-        <div class="divider"></div>
-        <h6>{{model.nickname}}</h6>
-        <p>{{model.description}}</p>
-      </div>
-    </div>
-
-    <div class="small-3 columns right">
-      <div class="section">
-        <h4>{{fa-icon 'user'}} Contact</h4>
+        <div class="profile-contact section">
+        <!-- <h4>{{fa-icon 'user'}} Contact</h4> -->
         {{#if model.facebookUrl}}
           <a {{bind-attr href=model.facebookUrl}}>{{fa-icon "facebook-square" size=2}}</a>
         {{/if}}
@@ -49,20 +57,41 @@
           <a {{bind-attr href=model.callToPhone}}>{{fa-icon "phone" size=2}}</a>
         {{/if}}
       </div>
+        
+      <div class="profile">
+        <h3>{{model.fullName}}</h3>
+        <div class="divider"></div>
+        <h6>{{model.nickname}}</h6>
+        <p>{{model.description}}</p>
+      </div>
+    </div>
 
+    <div class="small-3 columns right">
       <div class="section">
-        <h4>{{fa-icon 'comment'}} Language Spoken</h4>
-        {{#each lang in model.languagesSpoken}}
-          <div class="tag">{{lang}}</div>
-        {{/each}}
+        <h4>{{fa-icon 'thumbs-up'}} Rating</h4>
+            <i class="fa fa-star-o fa-2x"></i>
+            <i class="fa fa-star-o fa-2x"></i>
+            <i class="fa fa-star-o fa-2x"></i>
+            <i class="fa fa-star-o fa-2x"></i>
+            <i class="fa fa-star-o fa-2x"></i>
+      </div>
+        
+        <div class="section">
+        <h4>{{fa-icon 'list-ul'}} Reviews</h4>
+        
+          <div class="tag">
+            Review 1
+            
+            </div>
+            
+            <div class="tag">
+            Review 2
+            
+            </div>
+       
       </div>
 
-      <div class="section">
-        <h4>{{fa-icon 'pencil'}} Language Written</h4>
-        {{#each lang in model.languagesWritten}}
-          <div class="tag">{{lang}}</div>
-        {{/each}}
-      </div>
+      
     </div>
   </div>
 </div>

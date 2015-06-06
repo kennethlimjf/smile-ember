@@ -420,7 +420,7 @@ margin-top: -100px;
 }
 
 .ember-view.driver-item {
-  width: 30%;
+  width: 21.5%;
     min-width: 200px;
   height: 310px;
     text-align: left;
@@ -484,6 +484,63 @@ margin-top: -100px;
       color: $black;
     }
   }
+    
+    .intro{
+    
+        p{
+            margin-bottom: 2.2em;
+        }
+    
+    }
+    
+    .list-contact{
+    position: absolute;
+  bottom: 6px;
+  right: 10px;
+        
+        .fa-2x{
+        font-size: 1.25em;
+            color: rgb(120,120,120);
+            padding: 2px 4px 2px 4px;
+        }
+        
+    
+        .fa-facebook:hover{color:#3b5998;}
+        .fa-envelope-o:hover{color: #e67e22;}
+        .fa-phone:hover{color:#e74c3c;}
+    
+    }
+    
+    
+    .list-fav > .fa:nth-child(2) {
+  display: none;
+}
+.list-fav:hover > .fa:nth-child(1) {
+  display: none;
+}
+.list-fav:hover > .fa:nth-child(2) {
+  display: inherit;
+    color:#f1c40f;
+    position: absolute;
+  bottom: 3px;
+  left: 0px;
+}
+    
+     .list-fav{
+    position: absolute;
+  bottom: 6px;
+  left: 10px;
+         
+         .fa-2x{
+         font-size: 1.5em;
+        color: rgb(120,120,120);
+         }
+         
+        
+         
+        
+     }
+    
 }
 
 .hvr-float {
@@ -518,7 +575,7 @@ margin-top: -100px;
 .profile-page-fold {
   margin-top: -60px;
   height: 10px;
-  background-color: rgba(255,255,255,0.7);
+  background-color: rgba(255,255,255,0.6);
 }
 .profile-page-body {
   background: url('images/background/bg-blur-23.jpg') no-repeat center center fixed;
@@ -529,6 +586,22 @@ margin-top: -100px;
     background-color: $white;
     height: 100%;
   }
+    
+    
+.profile-contact{
+
+text-align: center;
+    margin-top: 15px;
+    
+    i{
+        padding: 0px 6px 0px 6px;
+    color: #222222;
+    }
+    .fa-facebook:hover{color:#3b5998;}
+        .fa-envelope-o:hover{color: #e67e22;}
+        .fa-phone:hover{color:#e74c3c;}
+}
+    
   .left {
     float: left;
   }
@@ -544,7 +617,12 @@ margin-top: -100px;
     color: $white;
 
     .section {
-      margin-top: 50px;
+      margin-top: 20px;
+    
+    .fa-star-o{
+    color: rgba(255,255,255,0.55);
+    }
+    
     }
     .section > a > i {
       margin-right: 10px;
@@ -552,16 +630,16 @@ margin-top: -100px;
     }
 
     h4 {
-      font-size: 1.2rem;
+      font-size: 0.9rem;
       font-weight: 400;
       color: $white;
       margin-bottom: 0.5em;
 
-      i { margin-right: 15px; }
+      i { margin-right: 15px; font-size: 1.4rem;}
     }
 
     .tag {
-      background-color: darkgrey;
+      background-color: rgba(255,255,255,0.2);
       display: inline-block;
       padding: 5px 10px;
       border-radius: 6px;
@@ -590,7 +668,7 @@ margin-top: -100px;
     text-align: center;
 
     h3 {
-      margin-top: 20px;
+      margin-top: 15px;
     }
 
     .divider {
@@ -669,7 +747,7 @@ display: block;
 @media (max-width: 1112px) {
  
     .ember-view.driver-item {
-  width: 45%;
+  width: 29%;
  
   }
 }
@@ -686,6 +764,16 @@ display: block;
      margin: auto auto;
  }
     
+    
+}
+
+
+@media (max-width: 978px) {
+ 
+  .ember-view.driver-item {
+  width: 45%;
+ 
+  }
     
 }
 
