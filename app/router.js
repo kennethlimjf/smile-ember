@@ -13,6 +13,9 @@ Router.map(function() {
   this.route("team", { path: "our-team" });
   this.route("faq", { path: "faq" });
   this.route("feedback", { path: "feedback" });
+  this.route('logout');
+  this.route('login');
+  this.route('protected');
 });
 
 Router.reopen({
