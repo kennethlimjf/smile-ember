@@ -57,7 +57,12 @@ module.exports = function(environment) {
       'facebook-oauth2': {
         apiKey: '963012110405020',
         redirectUri: 'http://localhost:4200'
-      }
+      },
+      'google-oauth2': {
+        apiKey: '243939248053-kbrb0feonr1o7dnieu0v65ag9m21t0ia.apps.googleusercontent.com',
+        scope: 'profile',
+        redirectUri: 'http://localhost:4200'
+    }
     }
   };
   return ENV;

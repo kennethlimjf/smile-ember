@@ -7,6 +7,12 @@ actions: {
                 //do sth here!
             });
             return;
+        },
+	googleLogin: function() {
+            this.get('session').authenticate('simple-auth-authenticator:torii', 'google-oauth2').then(function () {
+		//do sth here!
+            });
+            return;
         }
     }
 });
