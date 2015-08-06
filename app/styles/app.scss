@@ -565,7 +565,33 @@ margin-top: -100px;
  * Driver Profile Page
  */
 .profile-page-hero {
-  padding-top: 30px;
+  
+    background-image: url('http://www.epuzzled.net/New%20Folder%20(5)/tuk%20tuk%20Bangkok%20562%20kb.JPG');
+    background-repeat: no-repeat;
+    height: 300px !important;
+    background-size: cover;
+    background-position: center;
+    
+    p{
+        i{
+        font-size: 1.3em;
+    padding-right: 10px;
+        }
+        
+    position: absolute;
+    right: 3%;
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(0,0,0,0.4);
+    border-top:1px solid white;
+    border-bottom:1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 0.3px;
+    }
 
   iframe {
     margin: 0 auto;
@@ -580,18 +606,25 @@ margin-top: -100px;
 .profile-page-body {
   background: url('images/background/bg-blur-23.jpg') no-repeat center center fixed;
   background-size: cover;
-  height: 500px;
+  height: 700px;
 
   .main-content {
     background-color: $white;
     height: 100%;
+    padding: 0px 0px 0px 0px;
   }
     
     
-.profile-contact{
+.profile-rating{
 
 text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
+    
+    .rating i{
+  
+    padding: 0px 0px 0px 0px!important;
+    font-size: 20px;
+    }
     
     i{
         padding: 0px 6px 0px 6px;
@@ -611,7 +644,7 @@ text-align: center;
   }
 
   .left, .right {
-    background-color: transparent;
+    background-color: rgb(50,50,50);
     height: 100%;
     padding: 20px 30px 20px 50px;
     color: $white;
@@ -619,6 +652,7 @@ text-align: center;
     .section {
       margin-top: 20px;
     
+        
     .fa-star-o{
     color: rgba(255,255,255,0.55);
     }
@@ -652,7 +686,7 @@ text-align: center;
     height: 220px;
     border-radius: 110px;
     background-color: $white;
-    margin: -110px auto 0 auto;
+    margin: -30px 0px -25px 10%;
     -webkit-box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
     -moz-box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
     box-shadow: -2px 0px 10px -1px rgba(125,125,125,0.8);
@@ -664,11 +698,52 @@ text-align: center;
       margin: 5px;
     }
   }
+    
+    
+ .share-box{
+     
+     
+     
+     .butt-favorite{
+     border: 1px solid silver;
+    padding: 15px;
+         width: 180px;
+     }
+     
+     .butt-share{
+    margin-top: 35px;
+    padding: 15px;
+     }
+           
+           height: 200px;
+    border-left: 1px solid silver;
+    margin-top: 20px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+        
+           padding-top: 20px;
+           padding-bottom: 20px;
+           margin-top: 15px;
+           
+           i{
+           padding-right: 9px;
+            font-size: 18px;
+           
+           }
+           
+           a{
+           color: $black;
+            padding: 0px 12px 0px 12px;
+           }
+    
+    
+    }
+    
   .profile {
     text-align: center;
 
     h3 {
-      margin-top: 15px;
+      margin-top: 8px;
     }
 
     .divider {
@@ -680,7 +755,70 @@ text-align: center;
     p {
       margin-top: 30px;
     }
+      
+       .contact-info{
+           
+        padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: left;
+    margin-top: 15px;
+    padding-left: 10%;
+
+        
+
+           
+           i{
+           padding-right: 12px;
+            font-size: 18px;
+           
+           }
+           
+           a{
+               font-weight: 400;
+           color: $black;
+            padding: 0px 12px 0px 12px;
+           }
+    
+    
+    }
+    
+      
   }
+    
+.profile-details{
+    
+    height: 100%;
+    background-color: whitesmoke;
+    border-top:2px solid silver;
+    padding: 45px 10% 0px 10%;
+    
+
+    .comments{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid silver;
+    
+    }
+    
+    .comment{
+        
+        
+        .columns{
+        padding: 0px;
+        }
+        .small-6:last-child{
+            text-align: right
+        }
+    
+    height: 50px;
+    border-bottom: 1px solid rgb(220,220,220);
+    
+    margin: 12px;
+    background-color: $white;
+    padding: 12px;
+    }
+    
+}
 }
 
 /**
