@@ -26,9 +26,11 @@ function cheight(){
 <div class="topbar">
   <div class="top-bar-buttons">
 {{#if session.isAuthenticated}}
-<a href="#" class="button small">{{#link-to 'logout'}}<span style = "color:white;">Sign Out </span>{{/link-to}}</a>
+<button{{action 'invalidateSession'}} class="button small"><span style = "color:white;">Sign Out</span></button>
+
 {{else}}
- <a href="#" class="button small">{{#link-to 'login'}}<span style = "color:white;">Sign In</span>{{/link-to}}</a>    
+ <button class="button small"><span style = "color:white;">Sign In</span></button>    
+
 {{/if}}
   </div>
 
