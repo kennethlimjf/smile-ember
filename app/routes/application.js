@@ -11,6 +11,7 @@ actions: {
         },
         googleLogin: function() {
             this.get('session').authenticate('simple-auth-authenticator:torii', 'google-oauth2').then(function () {
+	   Ember.$('#loginModal').foundation('reveal', 'close');
                 //do sth here!
             });
             return;
