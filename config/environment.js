@@ -66,7 +66,7 @@ module.exports = function(environment) {
     ENV['torii'] = {  
     providers: {
       'facebook-oauth2': {
-        apiKey: '963012110405020',
+        apiKey: '1116873128340258',
         redirectUri: 'http://cambodiansmiles.com/'
       },
       'google-oauth2': {
