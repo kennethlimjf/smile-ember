@@ -1,6 +1,19 @@
-<div class="page">
+<div class="page driver-profile">
   <div class="profile-page-hero">
-    <p><i class="fa fa-picture-o"></i>Open photo gallery</p>
+    <p><i class="fa fa-picture-o"></i><span>Open photo gallery</span></p>
+      
+      <!--<div class="m-box">
+      <div class="share-box">
+            <div class="butt-favorite"><i class="fa fa-heart-o fa-2x"></i> </div>
+            
+            <div class="butt-share"> 
+            <i class="fa fa-facebook fa-2x"></i> 
+            <i class="fa fa-twitter fa-2x"></i>
+            <i class="fa fa-linkedin fa-2x"></i>
+            <i class="fa fa-weibo fa-2x"></i>
+                </div>
+          </div> 
+          </div>-->
     
     </div>
   <div class="profile-page-fold"></div>
@@ -59,7 +72,7 @@
     <div class="small-3 columns">
         
         <div class="share-box">
-            <h6 class="butt-favorite"><i class="fa fa-heart-o fa-2x"></i> Add to favorites</h6>
+            <h6 class="butt-favorite"><i class="fa fa-heart-o fa-2x"></i> <span>Add to favorites</span></h6>
             
             <div class="butt-share"><h6>Share:</h6> 
             <i class="fa fa-facebook fa-2x"></i> 
@@ -132,35 +145,35 @@
     <div class="small-3 columns right">
         
         <div class="section">
-        <h4>{{fa-icon 'comment'}} Language Spoken</h4>
+        <h4>{{fa-icon 'comment'}} <span>Language Spoken</span></h4>
         {{#each lang in model.languagesSpoken}}
           <div class="tag">{{lang}}</div>
         {{/each}}
       </div>
 
       <div class="section">
-        <h4>{{fa-icon 'pencil'}} Language Written</h4>
+        <h4>{{fa-icon 'pencil'}} <span>Language Written</span></h4>
         {{#each lang in model.languagesWritten}}
           <div class="tag">{{lang}}</div>
         {{/each}}
       </div>
         
       <div class="section">
-        <h4>{{fa-icon 'home'}} City</h4>
+        <h4>{{fa-icon 'home'}} <span>City</span></h4>
         {{#each city in model.cities}}
           <div class="tag">{{city}}</div>
         {{/each}}
       </div>
 
       <div class="section">
-        <h4>{{fa-icon 'taxi'}} Vehicle</h4>
+        <h4>{{fa-icon 'taxi'}} <span>Vehicle</span></h4>
         {{#each vehicle in model.vehicles}}
           <div class="tag">{{vehicle}}</div>
         {{/each}}
       </div>
 
       <div class="section">
-        <h4>{{fa-icon 'tachometer'}} Driving Experience</h4>
+        <h4>{{fa-icon 'tachometer'}} <span>Driving Experience</span></h4>
         <div class="tag">
          {{model.drivingYears}} years
             </div>
