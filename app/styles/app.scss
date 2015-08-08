@@ -139,8 +139,8 @@ body {
   position: fixed;
   width: 100%;
   background: rgba(0,0,0, 0.4);
-  padding: 20px 40px;
-  height: 105px;
+  padding: 5px 40px;
+  height: 52px;
   text-align: center;
   border-bottom: 2px solid #ffffff;
 
@@ -163,16 +163,17 @@ body {
   .logo_txt{
     color: white;
     text-transform: uppercase;
-      display: block;
+      display: inline;
     letter-spacing: 1px;
+      margin-left: 4px;
   }
 
   .tuk-tuk-logo {
     text-align: center;
 
     img {
-      width: 50px;
-      margin-top: -10px;
+      height: 42px;
+      margin-top: 0px;
     }
   }
 
@@ -186,7 +187,7 @@ body {
 .main-container {
   padding: 0;
   margin: 0;
-  margin-top: 105px;
+  margin-top: 52px;
   width: 100%;
   height: 20px;
   overflow-y: auto;
@@ -229,6 +230,17 @@ overflow-y: hidden;
   background-color: rgba(0,0,0, 0.65);
   color: $white;
 
+    .m-copyright{
+        p{
+        font-size: 13px;
+        }
+    
+    font-weight: 100;
+    width: 100%;
+    margin-top: 28px;
+    text-align: center;
+    display: none;
+    }
   .copyright {
     float: left;
     p {
@@ -283,6 +295,7 @@ overflow-y: hidden;
 /**
  * Home Page
  */
+
 .content {
     overflow: hidden;
   margin-top: 10px;
@@ -377,6 +390,20 @@ overflow-y: hidden;
       }
     }
   }
+}
+
+.fullbg-img{
+display: none;
+position: absolute;
+top:0px;
+width: 100%;
+height: 100%;
+background-image: url("images/fullbg1.jpg");
+background-size: cover;
+background-position: center;
+z-index: -1;
+
+
 }
 
 video {
@@ -568,9 +595,11 @@ margin-top: -100px;
   
     background-image: url('http://www.epuzzled.net/New%20Folder%20(5)/tuk%20tuk%20Bangkok%20562%20kb.JPG');
     background-repeat: no-repeat;
-    height: 300px !important;
+    background-attachment: fixed;
+    height: 400px !important;
     background-size: cover;
-    background-position: center;
+    background-position: top;
+    cursor: pointer;
     
     p{
         i{
@@ -599,7 +628,7 @@ margin-top: -100px;
   }
 }
 .profile-page-fold {
-  margin-top: -60px;
+  margin-top: -20px;
   height: 10px;
   background-color: rgba(255,255,255,0.6);
 }
@@ -610,7 +639,6 @@ margin-top: -100px;
 
   .main-content {
     background-color: $white;
-    height: 100%;
     padding: 0px 0px 0px 0px;
   }
     
@@ -713,6 +741,8 @@ text-align: center;
      .butt-share{
     margin-top: 35px;
     padding: 15px;
+         
+         
      }
            
            height: 200px;
@@ -917,6 +947,70 @@ display: block;
 
 @media (max-width: 780px) {
     
+    body {
+    background: rgba(0,0,0,0.13);
+    }
+    
+    .fullbg-img{
+        display: block
+    }
+    
+    video{
+        display: none;
+    }
+    
+    
+   
+    
+    .content .search-form .search-heading{
+    
+    margin-bottom: 10px!important;
+    
+    }
+    
+    .ember-view.form-group{ 
+        label{
+    display: none!important;
+    
+    }
+        select{width: 65%!important}
+    }
+    
+    
+    .footer{
+    padding: 32px 40px!important;
+    height: 170px!important;
+        
+        .links{
+        display: none;
+        }
+        
+        .m-copyright{
+        display: block!important;
+        
+        }
+        
+        .copyright{
+        display: none!important;
+        }
+    }
+    
+    .footer .contacts{
+    clear: both;
+    float: none;
+    text-align: center;
+        
+        img{
+        width: 33px!important;
+        height: 33px!important;
+        }
+        
+        a{
+        margin-left: 8px!important;
+        margin-right: 8px!important;
+        }
+    }
+    
     
     .search-form{
  width: 100%!important;
@@ -929,7 +1023,11 @@ display: block;
  
     .ember-view.driver-item {
   width: 90%!important;
-    height: 400px!important;
+    height: 300px!important;
+        
+        .avatar{
+        top: -70px!important;
+        }
  
   }
     
@@ -946,15 +1044,143 @@ display: block;
 }
 
 @media (max-width: 650px) {
+    
+    .share-box{display: none;}
+    
+    #content #ember418{
+    background-color: rgb(50,50,50)!important;
+    
+    }
+    
+    
+    .m-box .share-box{
+        display: block;
+        position: absolute!important;
+        display: none!important;
+        left: 0px;
+        top: 168px;
+
+        
+        .butt-favorite{
+            width: 54px!important;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 60px;
+        span{display: none;}
+        
+        }
+    }
+    
+    .profile-page-body{
+    height: 100%!important;
+        
+        
+        .profile{
+            .contact-info{
+            i{
+            display: inline;
+            }
+            
+            }
+        
+        }
+        
+        .main-content .small-3 {
+        width: 100%!important;
+            
+            .profile-avatar {
+            margin: -30px auto -25px auto;
+            }
+        }
+        
+        .main-content .small-6 {
+        width: 100%!important;
+        margin-top: 30px;
+        
+        }
+        
+    }
+    
+    .profile-page-hero{
+        height: 300px !important;
+    p{
+        border-radius: 50px;
+        background: rgba(0, 0, 0, 0.7)!important;
+        right: 35px!important;
+        i{padding-right: 0px!important;}
+        
+        span{
+    
+        display: none;
+    
+        }
+    }
+    }
+    
+    .banner i{
+    position: absolute;
+    top: 8px;
+    right: 9px;
+    
+    }
+    
+    .tag-line{
+        
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    
+     .content .search-form .button.black{
+    
+    height: 110px!important;
+    width: 110px!important;
+        
+        padding-top: 30px!important;
+        padding-left: 10px!important;
+        padding-right: 10px!important;
+        
+        i{
+        display: block!important;
+        margin-top: 8px!important;
+        }
+    
+    }
+    
     .banner{text-align: center!important;
     padding: 11px 20px!important;
     
     }
-    span{
+    .sign_banner span{
         display: block;
         
         }
     a{
     margin-top: 4px!important;
     }
+    
+    .right{
+        padding: 20px 0px 20px 0px!important;
+        
+        .tag{
+        font-size: 12px;
+        }
+        .section span{
+        display: none;
+        }
+        
+        i{margin-right: 0px!important;}
+        
+        h4{text-align: center!important;}
+        
+        .section{text-align: center;}
+    }
+    
+    .comment{
+    .small-6.columns{
+    margin-top: 0px!important;
+    width: 50%!important;
+    }
+    
+    }
+    
 }

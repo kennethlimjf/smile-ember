@@ -1,19 +1,29 @@
 
 <script>
     
+
 function hide(target) {
     document.getElementById(target).style.display = 'none';
 } 
 
 function cheight(){
-    var c_height = document.getElementById('content').clientHeight + 80;
+    var c_height = document.getElementById('content').clientHeight + document.getElementById('topmenu').height + document.getElementById('sign_banner').height;
     
     document.getElementById('close').onclick=
         hide('sign_banner');
     document.getElementById('content').style.height = c_height + "px"
-}
+};
+    
     
 </script>
+
+<!--<script>
+    window.onresize = function() {
+var c_height = document.getElementById('content').clientHeight + 80;
+  document.getElementById('content').style.height = c_height + "px";
+};
+
+</script>-->
 
 <div id="sign_banner" class="banner" >
   <span>Have a Driver to Contribute?</span> 
@@ -22,7 +32,7 @@ function cheight(){
     <i onclick="cheight()" id="close" class="fa fa-times"></i>
 </div>
 
-<div class="topbar">
+<div id="topmenu" class="topbar">
     <div class="logo-wrap">
   {{#link-to 'index' classNames="tuk-tuk-logo"}}
     <img src="assets/images/cs_logo.png" alt="">

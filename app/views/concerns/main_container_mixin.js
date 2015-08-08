@@ -16,7 +16,7 @@ export default Ember.Mixin.create({
 
   containerHeight: function() {
     // inner window height - topbar height
-    return window.innerHeight - 185;
+    return window.innerHeight - 132;
   },
 
   setHeight: function() {
