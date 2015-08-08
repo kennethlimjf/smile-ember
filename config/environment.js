@@ -67,7 +67,7 @@ module.exports = function(environment) {
     providers: {
       'facebook-oauth2': {
         apiKey: '1116873128340258',
-        redirectUri: 'http://cambodiansmiles.com/'
+        redirectUri: 'http://www.cambodiansmiles.com/'
       },
       'google-oauth2': {
         apiKey: '243939248053-kbrb0feonr1o7dnieu0v65ag9m21t0ia.apps.googleusercontent.com',
