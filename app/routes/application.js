@@ -5,6 +5,8 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 actions: {
         facebookLogin: function() {
             this.get('session').authenticate('simple-auth-authenticator:torii', 'facebook-oauth2').then(function () {
+	   Ember.$('#loginModal').foundation('reveal', 'close');
+
                 //do sth here!
             });
             return;
