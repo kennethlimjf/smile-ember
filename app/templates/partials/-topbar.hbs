@@ -26,7 +26,10 @@ function cheight(){
 <div class="topbar">
   <div class="top-bar-buttons">
 {{#if session.isAuthenticated}}
-<button{{action 'invalidateSession'}} class="button small"><span style = "color:white;">Sign Out</span></button>
+<button{{action 'invalidateSession'}} class="button small">
+{{fa-icon "user" size="lg" inverse=true}}
+ <span style = "color:white;">Sign Out</span>
+</button>
 
 {{else}}
  <button data-reveal-id="loginModal" class="button small"><span style = "color:white;">Sign In</span></button>    
